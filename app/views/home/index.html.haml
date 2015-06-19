@@ -1,4 +1,9 @@
-
 %section.home
   %h1 Hello Coderie Folks!
 
+  %aside.upcoming-meetups
+    %h2 Upcoming Meetups
+    - upcoming_meetups.each do |meetup|
+      %article.upcoming-meetup
+        %h3= meetup.name
+        %h4= meetup.starts_at

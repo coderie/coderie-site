@@ -9,7 +9,8 @@
   %body
     .container
       %header#site-header
-        %h1 Coderie
+        %h1= link_to 'Coderie', root_path
+
         %nav#site-nav
           %ul
             %li= link_to 'Meetups', meetups_path
