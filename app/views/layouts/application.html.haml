@@ -1,0 +1,22 @@
+!!!
+%html
+  %head
+    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
+    %title Coderie - The Erie, PA Software Development User Group
+    = stylesheet_link_tag    'application', media: 'all'
+    = javascript_include_tag 'application'
+    = csrf_meta_tags
+  %body
+    .container
+      %header#site-header
+        %h1 Coderie
+        %h3 The Erie, PA Softare Development User Group
+        %p Write Code? Live around Erie? Come join us!
+
+      %main#site-main
+        %p.notice= notice
+        %p.alert= alert
+        = yield
+
+      %footer#site-footer
+        Copyright &copy; 2015 Coderie User Group
