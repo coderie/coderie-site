@@ -14,7 +14,15 @@ User.create!(email: 'user@example.com',
              password_confirmation: 'usertest',
              confirmed_at: Time.now)
 
+location = Location.create!(name: 'Tungsten Creative',
+                           address: '510 W. 7th St.',
+                           city: 'Erie',
+                           state: 'PA',
+                           zip: '16502')
+
 Meetup.create!(name: 'Fake Meetup First',
                details: 'This meetup is going to be freakin sweet!',
                starts_at: '2015-06-30 11:00:00',
-               ends_at: '2015-06-30 14:00:00')
+               ends_at: '2015-06-30 14:00:00',
+               location: location
+              )
