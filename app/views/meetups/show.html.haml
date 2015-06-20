@@ -1,0 +1,10 @@
+%section.meetup
+  %h1= meetup.name
+  %h3= meetup.starts_at
+
+  %p= meetup.details
+
+  %aside.info
+    %ul
+      %li #{(meetup.starts_at.to_date - Time.now.to_date).to_i} days away
+      %li #{meetup.confirmed_attendees.count} members going
