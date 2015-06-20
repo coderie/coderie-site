@@ -9,3 +9,4 @@
 - `bundle exec rake db:setup` - Setup the database
 - `bundle exec rake db:seed` - Seed with starter data
 - `bundle exec rails s` - Serve the application
+- `bundle exec rake db:reset` - If you want to reset and re-seed your db
