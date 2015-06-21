@@ -1,9 +1,30 @@
+var fs = require('fs');
+var path = require('path');
+
+/*
+ * Bootstraps all entry point modules in the ./app/assets folder
+ */
+var entryPointModuleList = fs.readdirSync('./app/assets/javascripts/entry');
+var entryPointModules = {};
+
+entryPointModuleList.forEach(function(entryFile) {
+    entryPointModules[entryFile] = "./" + path.join('app/assets/javascripts/entry', entryFile);
+});
+
+/*
+ * Example entry points
+ * {
+ *  'my-module': 'app/assets/javascripts/entry/my-module.js'
+ *  'my-module2': 'app/assets/javascripts/entry/my-module2.js'
+ * }
+ */
+
 module.exports = {
     cache: false,
-    entry: "./path/to/app(s).js",//TODO add app paths
+    entry: entryPointModules,
     output: {
-        path: "./public/js/",//TODO assign correct public folder for js files
-        filename: 'bundle.js',
+        path: "./public/js/",
+        filename: '[name]',
     },
     module: {
         loaders: [
