@@ -12,4 +12,4 @@
 - `bundle exec rake db:reset` - If you want to reset and re-seed your db
 
 ## Additonal Docs
-* [Frontend developer workflow](https://github.com/coderie/coderie-site/blob/master/docs/fontend-workflow.md)
+* [Frontend developer workflow](/docs/frontend-workflow.md)

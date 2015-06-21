@@ -34,6 +34,9 @@ A simple component structure can look like...
 ---todo-item.js
 ```
 
+### Building with webpack
+Run `webpack --watch` to run an initial build of webpack and signal webpack to watch the entry point files.
+
 ### Loading files on demand with webpack
 Webpack can work similar to AMD, allowing us to load javascript modules on demand vs bundling everything into a single file.
 
