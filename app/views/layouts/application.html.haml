@@ -2,7 +2,7 @@
 %html
   %head
     %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
-    %title Coderie - The Erie, PA Software Development User Group
+    %title #{t(:site_name)} - #{t(:tag_line)}
     = stylesheet_link_tag    'application', media: 'all'
     = javascript_include_tag 'application'
     = csrf_meta_tags
@@ -25,7 +25,7 @@
               %li= link_to 'Login', new_user_session_path
               %li= link_to 'Sign Up', new_user_registration_path
 
-        %h3 The Erie, PA Softare Development User Group
+        %h3= t(:tag_line)
         %p Write Code? Live around Erie? Come join us!
 
       %main#site-main
