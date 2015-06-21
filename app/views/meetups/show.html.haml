@@ -1,6 +1,6 @@
 %section.meetup
   %h1= meetup.name
-  %h3= meetup.starts_at
+  %h3= meetup.date
 
   %p= meetup.details
 
@@ -8,20 +8,20 @@
     - if user_signed_in?
       %h3.location-name
         = meetup.location.name
-        (#{link_to "Map", maps_url(meetup.location)})
-      %pre.address= meetup.location.to_s
+        (#{link_to "Map", maps_url(meetup.full_address)})
+      %pre.address= meetup.full_address
     - else
       %p #{link_to 'Sign In', new_user_session_path} to see where this meetup is in Erie!
 
   %aside.info
     %ul
-      %li #{(meetup.starts_at.to_date - Time.now.to_date).to_i} days away
-      %li #{meetup.confirmed_attendees.count} members going
+      %li #{meetup.days_away} days away
+      %li #{meetup.members_attending} members going
 
   %aside.rsvp
     - if user_signed_in?
       - if meetup.rsvped?(current_user)
-        %p Your RSVP: #{meetup.attending?(current_user) ? 'Yes' : 'No'}
+        %p Your RSVP: #{meetup.rsvp_status(current_user)}
       - else
         %p RSVP Now:
         .rsvp-choices

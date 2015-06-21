@@ -4,7 +4,7 @@ class MeetupsController < ApplicationController
   end
 
   def show
-
+    render :show, locals: { meetup: MeetupPresenter.new(meetup) }
   end
 
   helper_method :meetup, :meetups
