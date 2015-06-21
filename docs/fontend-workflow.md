@@ -34,6 +34,14 @@ A simple component structure can look like...
 ---todo-item.js
 ```
 
+### Loading files on demand with webpack
+Webpack can work similar to AMD, allowing us to load javascript modules on demand vs bundling everything into a single file.
+
+High level overview can be found here: http://webpack.github.io/docs/code-splitting.html
+
+Todo: add more details and sample
+
+
 ###Testing
 TODO: Add unit testing guidelines
 

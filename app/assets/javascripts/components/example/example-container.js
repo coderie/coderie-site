@@ -13,7 +13,7 @@ var ExampleContainer = React.createClass({
         return (
             <div>
                 <h1>Example Container</h1>
-                <Example />
+                <ExampleItem />
             </div>
         );
     }
