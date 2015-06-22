@@ -11,5 +11,5 @@
 - `bundle exec rails s` - Serve the application
 - `bundle exec rake db:reset` - If you want to reset and re-seed your db
 
-## Additonal Docs
+## Additional Docs
 * [Frontend developer workflow](/docs/frontend-workflow.md)
