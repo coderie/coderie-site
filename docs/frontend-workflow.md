@@ -50,4 +50,8 @@ Todo: add more details and sample
 TODO: Add unit testing guidelines
 
 ### .scss workflow
-TODO: Add .scss workflow guideline. If you know how to do it with the ruby tools, feel free to edit this section and enlighten us all.
+SASS is compiled via Rails from application.css.scss. Bourbon, & Neat are used as our grid framework/mixin library and global user style vars/mixins etc. are found in app/assets/stylesheets/_global.scss. 
+
+Specific components should be broken out in the app/assets/stylesheets/components/ directory and be name accordingly. 
+
+You must include these via the main application.css.scss file. See Example: app/assets/stylesheets/components/_example.scss

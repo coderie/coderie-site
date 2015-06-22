@@ -20458,7 +20458,7 @@
 	                null,
 	                'Example Container'
 	            ),
-	            React.createElement(Example, null)
+	            React.createElement(ExampleItem, null)
 	        );
 	    }
 

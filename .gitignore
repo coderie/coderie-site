@@ -12,3 +12,7 @@ node_modules
 /log/*
 !/log/.keep
 /tmp
+
+#Ignore Webstorm Jetbrains Malarkey
+.idea
+.idea/*

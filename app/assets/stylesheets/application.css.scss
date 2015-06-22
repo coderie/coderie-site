@@ -1,6 +1,14 @@
 @import "bourbon";
 @import "neat";
 
+//Global Vars for Coderie Style
+@import "global";
+
+//Example component
+@import "components/example";
+
 .container {
   @include outer-container;
 }
+
+
