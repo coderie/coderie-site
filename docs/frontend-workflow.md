@@ -4,6 +4,7 @@
 node is required to setup all of the frontend dev tools.
 * node: Install from `https://nodejs.org/` 
 * npm: Comes with node installation
+
 *optional:* I would recommend installing nvm to manage your version of node: `https://github.com/creationix/nvm`
 
 ### Setup webpack and install modules
