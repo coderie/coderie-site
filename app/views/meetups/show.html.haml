@@ -18,14 +18,13 @@
       %li #{meetup.days_away} days away
       %li #{meetup.members_attending} members going
 
-  %aside.rsvp
+  %aside.rsvp{ class: meetup.rsvp_status(current_user).downcase }
     - if user_signed_in?
-      - if meetup.rsvped?(current_user)
-        %p Your RSVP: #{meetup.rsvp_status(current_user)}
-      - else
-        %p RSVP Now:
-        .rsvp-choices
-          %button.yes{ type: :button } Yes
-          %button.no{ type: :button } No
+      %p Your RSVP: #{meetup.rsvp_status(current_user)}
+      %p RSVP Now:
+      .rsvp-choices
+        = link_to 'Yes', meetup_rsvp_path(meetup, response: 'yes'), class: 'yes', 'data-method' => 'put'
+        = link_to 'Maybe', meetup_rsvp_path(meetup, response: 'maybe'), class: 'maybe', 'data-method' => 'put'
+        = link_to 'No', meetup_rsvp_path(meetup, response: 'no'), class: 'no', 'data-method' => 'put'
     - else
       %p #{link_to 'Sign In', new_user_session_path} to RSVP!
