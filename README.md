@@ -1,3 +1,4 @@
+![ScreenShot](app/assets/images/brand/coderie-main.png)
 # How to bootstrap the application
 
 ## Installation

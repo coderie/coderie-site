@@ -3,12 +3,9 @@
 
 //Global Vars for Coderie Style
 @import "global";
-
 //Example component
 @import "components/example";
-
-.container {
-  @include outer-container;
-}
+@import "grid";
+@import "typography";
 
 

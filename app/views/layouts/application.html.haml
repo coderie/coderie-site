@@ -9,21 +9,23 @@
   %body
     .container
       %header#site-header
-        %h1= link_to 'Coderie', root_path
+        .row
+          .third
+            %h1= link_to 'Coderie', root_path
+          .two-third
+            %nav#site-nav
+              %ul
+                %li= link_to 'Meetups', meetups_path
 
-        %nav#site-nav
-          %ul
-            %li= link_to 'Meetups', meetups_path
-
-        %nav#user-nav
-          - if user_signed_in?
-            %p Welcome, #{current_user.email}!
-            %ul
-              %li= link_to 'Logout', destroy_user_session_path, 'data-method' => 'delete'
-          - else
-            %ul
-              %li= link_to 'Login', new_user_session_path
-              %li= link_to 'Sign Up', new_user_registration_path
+            %nav#user-nav
+              - if user_signed_in?
+                %p Welcome, #{current_user.email}!
+                %ul
+                  %li= link_to 'Logout', destroy_user_session_path, 'data-method' => 'delete'
+              - else
+                %ul
+                  %li= link_to 'Login', new_user_session_path
+                  %li= link_to 'Sign Up', new_user_registration_path
 
         %h3= t(:tag_line)
         %p Write Code? Live around Erie? Come join us!
