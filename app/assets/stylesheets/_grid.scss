@@ -1,0 +1,29 @@
+
+body{
+  background: $primary-lt;
+}
+//basic grid
+.container {
+  @include outer-container;
+  .row{
+    @include row();
+  }
+  .half{
+    @include span-columns(6 of 12);
+  }
+  .third{
+    @include span-columns(3 of 12);
+    &:last-child{
+      @include omega();
+    }
+  }
+  .two-third{
+    @include span-columns(9 of 12);
+    &:last-child{
+      @include omega();
+    }
+  }
+  .full{
+    @include fill-parent();
+  }
+}

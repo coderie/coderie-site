@@ -1,12 +1,25 @@
 //Global App Styles and Vars
-//**color scheme
-//primary
-$primary: red;
-//secondary
-$secondary: blue;
-//tertiary colors
-$tertiary: orange;
-//example
-body{
-  background: $tertiary;
-}
+//========Color scheme
+
+//primary colors
+$primary: #4A90E2; //Bright Blue
+$primary-dk: #1F4889;
+$primary-lt: #CCE2FF;
+
+//secondary colors
+$secondary: #3EE900; //Neon Green
+$secondary-dk: #B8E986;
+$secondary-lt: #DDEFCA;
+
+//tertiary & system colors
+$danger: #F44336;
+$gray: #EAE9E9;
+$black: #000;
+$white: #fff;
+
+//============fonts and typography
+
+//primary font
+//@include font-face("Primary Bold", "AlegreyaSans-Bold", bold, $asset-pipeline: true, $file-formats: ttf);
+//TODO: Load all fonts in and include other formats woff and eot
+
