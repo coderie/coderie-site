@@ -12,7 +12,9 @@
   
   For purposes of good documentation, when submitting a Pull Request(PR) add screenshots of changes to the descriptions if you’re adding a feature, adding styles, etc . 
   
-  #### To take a screenshot:
+#### To take a screenshot:
   
   * On a Mac press `⌘` + `Shift` + `4` then drag a box over the desired area. The screenshot will be added to your desktop by default.  
   * On a Windows machine press `Windows key`+ `PrtScn` and the screen will dim for a moment when the screen is copied and saved as a file in the Screenshots folder (which is in your Pictures folder).
+
+---
