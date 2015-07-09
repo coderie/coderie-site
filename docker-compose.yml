@@ -1,0 +1,14 @@
+db:
+  image: postgres:9.4
+  environment:
+    - POSTGRES_PASSWORD=Password1234
+
+web:
+  build: .
+  command: rails server -b 0.0.0.0
+  ports:
+    - '3000:3000'
+  volumes:
+    - '.:/usr/src/app'
+  links:
+    - db
