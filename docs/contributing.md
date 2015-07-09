@@ -8,9 +8,13 @@
   
 ---
 
+## Branches:
+Please create a branch for any new features, hotfixes, etc and then submit a Pull Request(PR) for code review and approval by the group. Once tested and approved this branch will be merged into the development branch and tested along side cohort PR's before being pushed to master for production.
+
+
 ### Pull Requests: 
   
-  For purposes of good documentation, when submitting a Pull Request(PR) add screenshots of changes to the descriptions if you’re adding a feature, adding styles, etc . 
+  For purposes of good documentation, when submitting a PR add screenshots of changes to the descriptions if you’re adding a feature, adding styles, etc . 
   
 #### To take a screenshot:
   
