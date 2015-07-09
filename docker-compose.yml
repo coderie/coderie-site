@@ -1,0 +1,22 @@
+db:
+  image: postgres:9.4
+  environment:
+    - POSTGRES_PASSWORD=Password1234
+  ports:
+    - "5432:5432"
+
+redis:
+  image: redis
+  ports:
+    - "6379:6379"
+
+web:
+  build: .
+  command: bundle exec rails s -b 0.0.0.0
+  volumes:
+    - .:/myapp
+  ports:
+    - "3000:3000"
+  links:
+    - db
+    - redis
