@@ -14,4 +14,5 @@
 - `bundle exec rake db:reset` - If you want to reset and re-seed your db
 
 ## Additional Docs
+* [Contributing Guidelines](/docs/contributing.md)
 * [Frontend developer workflow](/docs/frontend-workflow.md)
