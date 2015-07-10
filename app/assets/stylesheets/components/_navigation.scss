@@ -1,0 +1,16 @@
+//navigation styles
+nav{
+  float:left;
+  ul{
+    margin: 0;
+    padding: 0;
+    li{
+      margin: 0;
+      padding: 0;
+      display: inline-block;
+      a{
+        display: block;
+      }
+    }
+  }
+}

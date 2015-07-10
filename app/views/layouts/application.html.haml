@@ -11,7 +11,12 @@
       %header#site-header
         .row
           .third
-            %h1= link_to 'Coderie', root_path
+            %div.brand
+              = link_to root_path do
+                =image_tag 'brand/circlebraces.png', :class => 'brandmark'
+                %span.cod>Cod
+                %span.e>e
+                %span.rie>rie
           .two-third
             %nav#site-nav
               %ul
@@ -27,13 +32,12 @@
                   %li= link_to 'Login', new_user_session_path
                   %li= link_to 'Sign Up', new_user_registration_path
 
-        %h3= t(:tag_line)
-        %p Write Code? Live around Erie? Come join us!
+      -#%h3= t(:tag_line)
+      -#%p Write Code? Live around Erie? Come join us!
+    %main#site-main
+      %p.notice= notice
+      %p.alert= alert
+      = yield
 
-      %main#site-main
-        %p.notice= notice
-        %p.alert= alert
-        = yield
-
-      %footer#site-footer
-        Copyright &copy; 2015 Coderie User Group
+    %footer#site-footer
+      Copyright &copy; 2015 Coderie User Group

@@ -1,9 +1,24 @@
-%section.home
-  %h1 Hello Coderie Folks!
-
-  %aside.upcoming-meetups
-    %h2 Upcoming Meetups
-    - upcoming_meetups.each do |meetup|
-      %article.upcoming-meetup
-        %h3= meetup.name
-        %h4= meetup.starts_at
+.container
+  %section.home
+    %h1 Coderie Code Monthly Meetup
+    %div.terminal-window
+      %header
+        %div.button.green
+        %div.button.yellow
+        %div.button.red
+      %div.terminal
+        %form#sign-up-form
+          %label(aria-hidden=true)
+            %span.arrow-cursor >
+            %span.blinking-cursor
+            %span.invisible Email Address:
+          %input.terminal-cmd-input.required.email{:type=>'email'}
+          %p type in your email address above to join
+%section.body-content#home-content
+  .container
+    %aside.upcoming-meetups
+      %h2 Upcoming Meetups
+      - upcoming_meetups.each do |meetup|
+        %article.upcoming-meetup
+          %h3= meetup.name
+          %h4= meetup.starts_at
