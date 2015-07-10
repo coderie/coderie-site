@@ -22,4 +22,46 @@ $white: #fff;
 //primary font
 //@include font-face("Primary Bold", "AlegreyaSans-Bold", bold, $asset-pipeline: true, $file-formats: ttf);
 //TODO: Load all fonts in and include other formats woff and eot
+.brand{
+  margin-top: 10px;
+  .brandmark {
+    max-width: 55px;
+    margin-right: 3px;
+    margin-bottom: -10px;
+  }
+  a{
+    display: block;
+    color: $primary-dk;
+    font-size: 2.7em;
+    text-decoration: none;
+  }
+  span{
+    display:inline;
+    padding: 0;
+    margin: 0;
 
+  }
+  .cod{color: $black;}
+  .rie{color:$primary;}
+}
+//basic utils
+.invisible{
+  display: none;
+}
+
+//Random Animations
+@keyframes blink{
+  0% { opacity:1; }
+  50% { opacity:0; }
+  100% { opacity:1; }
+}
+@-webkit-keyframes blink{
+  0% { opacity:1; }
+  50% { opacity:0; }
+  100% { opacity:1; }
+}
+@-moz-keyframes blink{
+  0% { opacity:1; }
+  50% { opacity:0; }
+  100% { opacity:1; }
+}
