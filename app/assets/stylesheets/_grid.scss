@@ -27,3 +27,7 @@ body{
     @include fill-parent();
   }
 }
+.body-content{
+  @include fill-parent();
+  background: white;
+}
