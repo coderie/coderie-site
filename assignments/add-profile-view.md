@@ -18,7 +18,7 @@ What this will do is dehydrate the data from the server to the dom, which we wil
 
 ##Step 2
 * Add `user-profile-list-entry.js` to  `/assets/javascript/entry/`
-* In the entry point file, require react as well as the `user-profile-list-container` we are going to make in step 2.
+* In the entry point file, require react as well as the `user-profile-list-container` we are going to make in step 3.
 * Tell react to render <UserProfileListContainer /> to a dom element with the id of `#user-profile-list-container`
 
 *Reference `/assets/javascript/entry/example-entry.js` for an example of requiring and naming conventions*
