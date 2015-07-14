@@ -12,7 +12,7 @@ Please have [http://facebook.github.io/react/docs/getting-started.html](http://f
 ##Step 1
 * Open up `/app/views/profiles/index.html.haml`
 * Blow away lines 5-9 of machuga code (bwa ha ha)
-* Add #user-profile-list-container{: 'data-user-profiles’ => profile.to_json}` to line 5
+* Add `#user-profile-list-container{: 'data-user-profiles’ => profile.to_json}` to line 5
 
 What this will do is dehydrate the data from the server to the dom, which we will user later in our component.
 
