@@ -15,8 +15,10 @@ var UserProfileListContainer = React.createClass({
   },
 
   getInitialState: function(){
-  var userProfileData  document.getElementById('user-profile-list-container').dataset.userProfiles
-  }
+  var userProfileData = document.getElementById('user-profile-list-container').dataset.userProfiles
+  },
+  return {userProfiles: userProfileData}
+
 
 });
 
