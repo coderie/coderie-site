@@ -11,13 +11,14 @@ var UserProfileListContainer = React.createClass({
     return (
       <div>{profiles}</div>
     );
+    //Something is not right in here, but can't find the page to debug.
     );
   },
 
   getInitialState: function(){
   var userProfileData = document.getElementById('user-profile-list-container').dataset.userProfiles
   },
-  return {userProfiles: userProfileData}
+  return: {userProfiles: userProfileData}
 
 
 });
