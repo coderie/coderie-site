@@ -6,6 +6,8 @@ Rails.application.routes.draw do
   resources :meetups, only: %i(index show) do
     put :rsvp, controller: :rsvps, action: :update, as: :rsvp
   end
+
+  resources :profiles
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

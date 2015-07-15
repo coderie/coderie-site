@@ -10,7 +10,7 @@ class RsvpsController < ApplicationController
       rsvp.destroy
     end
 
-    # Make this default for json requests:
+    # Make this default for json xhr requests:
     # head :no_content
     redirect_to meetup
   end
