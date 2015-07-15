@@ -1,0 +1,35 @@
+//Base Design Elements
+.upcoming-meetup{
+  background: $gray;
+  padding: 2em;
+  border-radius: 8px;
+  margin-bottom: 2em;
+  h3, h4{
+    margin: 0;
+    line-height: 2em;
+  }
+  h3{
+    margin-bottom: 1em;
+    color: $primary-dk;
+    font-size: 1.7em;
+  }
+  p{
+    margin: 0;
+    line-height: 1.7em;
+  }
+}
+.icon-row{
+  img{
+    display: block;
+    margin: 1em auto;
+  }
+}
+#site-footer{
+  background: $primary-dk;
+  color: white;
+  padding: 40px 0;
+  p{
+    font-family: "Lato Bold", sans-serif;
+
+  }
+}
