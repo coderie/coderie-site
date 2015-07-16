@@ -28,20 +28,22 @@ var TerminalWindow = React.createClass({
       case 40: // Down
         break;
       default:
-        this.moveCursor()
+        this.moveCursor();
     }
   },
   update: function(e){
     //TODO: Need real live validation here for emails
     if(e.target.value === 'ed@htmelvis.com'){
-      var msg = "What's up Ed!";
+      var terminalMessage = "What's up Ed!";
     } else{
-      var msg = "OOOPpppss you seem to have not typed in an email address";
+      var terminalMessage = "Ooopss you seem to have not typed in an email address";
     }
-
     this.setState({
-      message: msg
+      message: terminalMessage
     })
+  },
+  propTypes: {
+    update: React.PropTypes.func.isRequired
   },
   render: function() {
     return (
@@ -52,14 +54,12 @@ var TerminalWindow = React.createClass({
               <span className="arrow-cursor">></span>
               <span className="blinking-cursor"></span>
             </label>
-
             <TerminalPrompt update={this.update} />
             <p>{this.state.message}</p>
           </form>
         </div>
     );
   }
-
 });
 
 module.exports = TerminalWindow;
