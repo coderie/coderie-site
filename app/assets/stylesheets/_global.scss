@@ -52,7 +52,12 @@ $white: #fff;
 .invisible{
   display: none !important;
 }
-
+.padded-out{
+  padding-bottom: 5em !important;
+}
+a{
+  color: $primary;
+}
 //Random Animations
 @keyframes blink{
   0% { opacity:1; }

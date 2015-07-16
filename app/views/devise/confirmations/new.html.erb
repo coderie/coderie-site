@@ -1,12 +1,22 @@
-<h2>Resend confirmation instructions</h2>
 
-<%= form_for(resource, :as => resource_name, :url => confirmation_path(resource_name), :html => { :method => :post }) do |f| %>
-  <%= devise_error_messages! %>
+<div class="container">
+<div class="row">
+<div class="tight-container padded-out">
+  <div class="panel">
 
-  <div><%= f.label :email %><br />
-  <%= f.email_field :email %></div>
+      <h2>Resend confirmation instructions</h2>
 
-  <div><%= f.submit "Resend confirmation instructions" %></div>
-<% end %>
+      <%= form_for(resource, :as => resource_name, :url => confirmation_path(resource_name), :html => { :method => :post }) do |f| %>
+        <%= devise_error_messages! %>
 
-<%= render :partial => "devise/shared/links" %>
+        <div><%= f.label :email %><br />
+        <%= f.email_field :email %></div>
+
+        <div><%= f.submit "Resend confirmation instructions" %></div>
+      <% end %>
+
+      <%= render :partial => "devise/shared/links" %>
+      </div>
+    </div>
+  </div>
+</div>
