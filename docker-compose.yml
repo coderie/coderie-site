@@ -2,13 +2,28 @@ db:
   image: postgres:9.4
   environment:
     - POSTGRES_PASSWORD=Password1234
+  ports:
+    - "5432"
+
+redis:
+  image: redis
+  ports:
+    - "6379"
+
+sidekiq:
+  build: .
+  command: bundle exec sidekiq
+  links:
+    - db
+    - redis
 
 web:
   build: .
-  command: rails server -b 0.0.0.0
-  ports:
-    - '3000:3000'
+  command: bundle exec rails s -b 0.0.0.0
   volumes:
-    - '.:/usr/src/app'
+    - .:/myapp
+  ports:
+    - "3000:3000"
   links:
     - db
+    - redis

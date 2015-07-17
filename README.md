@@ -5,7 +5,7 @@
 - boot2docker installed (Kitematic on OS X will work)
 
 ## Installation
-- `docker run -it -v $(pwd):/usr/src/app -w /usr/src/app ruby:2.2 bundle install && docker-compose build`
+- `docker-compose build`
 - `docker-compose up`
 - `docker-compose run web rake db:create`
 - `docker-compose run web rake db:migrate`
@@ -26,7 +26,7 @@ dependencies shipped with it. This creates a bit more work though.  Instead of
 just `bundle install` after gem changes, you will need to run the following:
 
 ```shell
-docker run -it -v $(pwd):/usr/src/app -w /usr/src/app ruby:2.2 bundle install && docker-compose build
+docker-compose build
 ```
 
 ## Additional Docs
