@@ -6,9 +6,9 @@
   height: 360px;
   border-radius: 10px;
   margin: auto;
-  margin-top: -15px;
+  margin-top: 0px;
   position: relative;
-  //@include box-shadow(1px 1px 6px #777, -1px -1px 9px #666);
+  @include box-shadow(1px 1px 8px #777);
   header{
     background: #E0E8F0;
     height: 30px;
@@ -30,22 +30,23 @@
       font-size: 1.5em;
       color: $secondary;
     }
-    .blinking-cursor{
-      width: 16px;
-      background: white;
-      height: 24px;
-      opacity: 1;
-      position:relative;
-      bottom: -5px;
-      display: inline-block;
-      @include animation(blink 1.0s ease-in infinite);
-    }
+    //.blinking-cursor{
+    //  width: 16px;
+    //  background: white;
+    //  height: 24px;
+    //  opacity: 1;
+    //  position:relative;
+    //  bottom: -5px;
+    //  left: 5px;
+    //  display: inline-block;
+    //  @include animation(blink 1.0s ease-in infinite);
+    //}
     #sign-up-form{
       color: white;
       font-family: Menlo, Monaco, "Consolas", "Courier New", "Courier";
       font-size: 11pt;
       background: #30353A;
-      padding: 10px;
+      padding: 45px;
       box-sizing: border-box;
       position: absolute;
       width: 100%;
@@ -57,19 +58,21 @@
           outline: 0;
           box-shadow: 0;
         }
+        width: 56%;
         position: relative;
-        left: -20px;
+        left: 5px;
         background: transparent;
         border: none;
         box-shadow: 0;
         color: white;
+        font-size: 1.2em;
       }
     }
   }
 }
 .home{
   > h1{
-    font-size: 3em;
+    font-size: 4em;
     text-align: center;
     color: $white;
     margin-bottom: 0;
@@ -79,4 +82,5 @@
   padding-top: 70px;
   position: relative;
   top: -60px;
+  margin-bottom: -60px;
 }

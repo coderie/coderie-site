@@ -1,7 +1,10 @@
 %section.meetups
-  %h1 Meetups
-
-  - meetups.each do |meetup|
-    %article.meetup
-      %h3= link_to meetup.name, meetup_path(meetup)
-      %h4= meetup.starts_at
+  .container
+    .row
+      .tight-container
+        %h1 Meetups
+        -#=image_tag 'twittertoppanel.jpg', :class => 'full-img'
+        - meetups.each do |meetup|
+          %article.meetup
+            %h3= link_to meetup.name, meetup_path(meetup)
+            %h4= meetup.starts_at
