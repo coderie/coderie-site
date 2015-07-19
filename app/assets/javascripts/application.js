@@ -12,5 +12,5 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require_tree .
-#=require google-analytics
+//= require main
+//= require google-analytics

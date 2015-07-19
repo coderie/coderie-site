@@ -1,4 +1,30 @@
 //Main Typographic Styles for Coderie
 h1,h2,h3,h4,h5,h6{
-  font-family: "Primary-Bold", Helvetica, Arial, Sans-serif;
+  font-family: "Primary Bold", Helvetica, Arial, Sans-serif;
+}
+.hype-text{
+  color: $primary-dk;
+  text-align: center;
+  font-size: 2.4em;
+  margin-top: 0;
+}
+.text-center{
+  text-align: center;
+}
+article{
+  header{
+    h1,h2,h3,h4,h5,h6{
+      margin: 0;
+    }
+  }
+}
+figure{
+  a{
+    text-decoration: none;
+  }
+  h2{
+   color: $primary-dk;
+   text-decoration: none;
+
+  }
 }

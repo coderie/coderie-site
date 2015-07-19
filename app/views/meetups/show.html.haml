@@ -1,30 +1,31 @@
 %section.meetup
-  %h1= meetup.name
-  %h3= meetup.date
+  .container
+    %h1= meetup.name
+    %h3= meetup.date
 
-  %p= meetup.details
+    %p= meetup.details
 
-  %aside.location
-    - if user_signed_in?
-      %h3.location-name
-        = meetup.location.name
-        (#{link_to "Map", maps_url(meetup.full_address)})
-      %pre.address= meetup.full_address
-    - else
-      %p #{link_to 'Sign In', new_user_session_path} to see where this meetup is in Erie!
+    %aside.location
+      - if user_signed_in?
+        %h3.location-name
+          = meetup.location.name
+          (#{link_to "Map", maps_url(meetup.full_address)})
+        %pre.address= meetup.full_address
+      - else
+        %p #{link_to 'Sign In', new_user_session_path} to see where this meetup is in Erie!
 
-  %aside.info
-    %ul
-      %li #{meetup.days_away} days away
-      %li #{meetup.members_attending} members going
+    %aside.info
+      %ul
+        %li #{meetup.days_away} days away
+        %li #{meetup.members_attending} members going
 
-  %aside.rsvp{ class: meetup.rsvp_status(current_user).downcase }
-    - if user_signed_in?
-      %p Your RSVP: #{meetup.rsvp_status(current_user)}
-      %p RSVP Now:
-      .rsvp-choices
-        = link_to 'Yes', meetup_rsvp_path(meetup, response: 'yes'), class: 'yes', 'data-method' => 'put'
-        = link_to 'Maybe', meetup_rsvp_path(meetup, response: 'maybe'), class: 'maybe', 'data-method' => 'put'
-        = link_to 'No', meetup_rsvp_path(meetup, response: 'no'), class: 'no', 'data-method' => 'put'
-    - else
-      %p #{link_to 'Sign In', new_user_session_path} to RSVP!
+    %aside.rsvp{ class: meetup.rsvp_status(current_user).downcase }
+      - if user_signed_in?
+        %p Your RSVP: #{meetup.rsvp_status(current_user)}
+        %p RSVP Now:
+        .rsvp-choices
+          = link_to 'Yes', meetup_rsvp_path(meetup, response: 'yes'), class: 'yes', 'data-method' => 'put'
+          = link_to 'Maybe', meetup_rsvp_path(meetup, response: 'maybe'), class: 'maybe', 'data-method' => 'put'
+          = link_to 'No', meetup_rsvp_path(meetup, response: 'no'), class: 'no', 'data-method' => 'put'
+      - else
+        %p #{link_to 'Sign In', new_user_session_path} to RSVP!
