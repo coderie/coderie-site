@@ -1,6 +1,6 @@
 .container
   %section.home
-    %h1 Coderie Code Monthly Meetup
+    %h1 The Coderie
     %div.terminal-window
       %header
         %div.button.green
@@ -11,13 +11,12 @@
 %section.body-content#home-content
   .container
     -#TODO: Change this tagline type hype line please dear god
-    %h2.hype-text We think that you will love what we have to offer!
+    %h2.hype-text A community and meetup group for software developers in Erie, PA
     .tight-container
       .row
         .full
           %aside.upcoming-meetups
           %h2 Upcoming Meetups
-          -#- upcoming_meetups.each do |meetup|
           %article.upcoming-meetup
             -#TODO: Allow real data to flow here
             .row
@@ -27,8 +26,19 @@
                 %h4 Location: Radius CoWork
               .three-fourth
                 %p A helper mixin enabling short-hand notation for directional properties. It accepts a prefix, suffix, and array of up to four values that map to top, right, bottom, and left, respectively. You can optionally pass in null for the suffix argument to ignore it. You can optionally pass a null argument for a directional value to ignore it.
-            -#%h3= meetup.name
-            -#%h4= meetup.starts_at
+          - upcoming_meetups.each do |meetup|
+            %article.upcoming-meetup
+              .row
+                %h3= meetup.name
+                %h3= meetup.location_name
+                .fourth
+                  %h4 Startup time: #{meetup.start_time}
+                  %h4 Location: #{meetup.full_address}
+                .three-fourth
+                  %p= meetup.details
+              -#%h3= meetup.name
+              -#%h4= meetup.starts_at
+
 
 
     .row.icon-row
