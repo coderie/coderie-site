@@ -8,32 +8,39 @@
     = csrf_meta_tags
   %body
     .container
-      %header#site-header
+      %header#site-header.tight-container
         .row
           .third
-            %h1= link_to 'Coderie', root_path
+            %div.brand
+              = link_to root_path do
+                =image_tag 'brand/circlebraces.png', :class => 'brandmark'
+                %span.cod>Cod
+                %span.e>e
+                %span.rie>rie
           .two-third
-            %nav#site-nav
-              %ul
-                %li= link_to 'Meetups', meetups_path
-
-            %nav#user-nav
-              - if user_signed_in?
-                %p Welcome, #{current_user.email}!
+            .nav-wrap
+              %nav#site-nav
                 %ul
-                  %li= link_to 'Logout', destroy_user_session_path, 'data-method' => 'delete'
-              - else
-                %ul
-                  %li= link_to 'Login', new_user_session_path
-                  %li= link_to 'Sign Up', new_user_registration_path
+                  %li= link_to 'Meetups', meetups_path
 
-        %h3= t(:tag_line)
-        %p Write Code? Live around Erie? Come join us!
+              %nav#user-nav
+                - if user_signed_in?
+                  %p Welcome, #{current_user.email}!
+                  %ul
+                    %li= link_to 'Logout', destroy_user_session_path, 'data-method' => 'delete'
+                - else
+                  %ul
+                    %li= link_to 'Login', new_user_session_path
+                    %li= link_to 'Sign Up', new_user_registration_path
 
-      %main#site-main
-        %p.notice= notice
-        %p.alert= alert
-        = yield
+      -#%h3= t(:tag_line)
+      -#%p Write Code? Live around Erie? Come join us!
+    %main#site-main
+      %div.notice= notice
+      %div.alert= alert
+      = yield
 
-      %footer#site-footer
-        Copyright &copy; 2015 Coderie User Group
+    %footer#site-footer
+      %p.text-center Copyright &copy; 2015 Coderie User Group
+
+    %script(src="/js/terminal-window.js")

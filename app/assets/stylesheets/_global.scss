@@ -19,7 +19,58 @@ $white: #fff;
 
 //============fonts and typography
 
-//primary font
-//@include font-face("Primary Bold", "AlegreyaSans-Bold", bold, $asset-pipeline: true, $file-formats: ttf);
-//TODO: Load all fonts in and include other formats woff and eot
+//primary bold font(s)
+@include font-face("Primary Bold", "AlegreyaSans-Bold", bold);
+@include font-face("Lato Bold", "Lato-Bold", bold);
 
+
+.brand{
+  margin-top: 10px;
+  .brandmark {
+    max-width: 55px;
+    margin-right: 3px;
+    margin-bottom: -5px;
+  }
+  a{
+    display: block;
+    color: $primary-dk;
+    font-size: 2em;
+    padding-top: 5px;
+    text-decoration: none;
+    font-family: "Primary Bold", sans-serif;
+  }
+  span{
+    display:inline;
+    padding: 0;
+    margin: 0;
+
+  }
+  .cod{color: $black;}
+  .rie{color:$primary;}
+}
+//basic utils
+.invisible{
+  display: none !important;
+}
+.padded-out{
+  padding-bottom: 5em !important;
+}
+a{
+  color: $primary;
+}
+//Random Animations
+@keyframes blink{
+  0% { opacity:1; }
+  50% { opacity:0; }
+  100% { opacity:1; }
+}
+@-webkit-keyframes blink{
+  0% { opacity:1; }
+  50% { opacity:0; }
+  100% { opacity:1; }
+}
+@-moz-keyframes blink{
+  0% { opacity:1; }
+  50% { opacity:0; }
+  100% { opacity:1; }
+}

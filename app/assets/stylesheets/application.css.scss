@@ -1,3 +1,4 @@
+@import "utils/normalize";
 @import "bourbon";
 @import "neat";
 
@@ -5,7 +6,10 @@
 @import "global";
 //Example component
 @import "components/example";
+@import "components/navigation";
+@import "pages/home";
 @import "grid";
 @import "typography";
-
+@import "components/elements";
+@import "components/forms";
 

@@ -39,6 +39,10 @@ class MeetupPresenter < SimpleDelegator
     members.count - members_attending + members_unavailable
   end
 
+  def location_name
+    location.name
+  end
+
   def full_address
     location.to_s
   end

@@ -1,9 +1,10 @@
 %section.profiles-page
-  %h1 Member Profiles
-  %h2 Who are the lovely folk that make up the Coderie?
+  .container
+    %h1 Member Profiles
+    %h2 Who are the lovely folk that make up the Coderie?
 
-  #user-profile-list-container{: 'data-user-profiles’ => profile.to_json}
-
-
-  -#What this will do is dehydrate the data from the server to the dom, which we will user later in our component.
-
+    .profiles
+      - profiles.each do |profile|
+        %article.profile
+          %h3= profile.name
+          = link_to image_tag(profile.photo, title: "Photo for #{profile.name}", alt: "Photo for #{profile.name}"), profile_path(profile)

@@ -20,6 +20,10 @@ default: &default
   # For details on connection pooling, see rails configuration guide
   # http://guides.rubyonrails.org/configuring.html#database-pooling
   pool: 5
+  host: <%= ENV['APP_POSTGRESQL_DB_HOST'] %>
+  post: <%= ENV['APP_POSTGRESQL_DB_PORT'] %>
+  username: <%= ENV['APP_POSTGRESQL_DB_USERNAME'] %>
+  password: <%= ENV['APP_POSTGRESQL_DB_PASSWORD'] %>
 
 development:
   <<: *default
