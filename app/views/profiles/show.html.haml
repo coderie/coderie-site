@@ -2,4 +2,6 @@
   .container
     %h1= profile.name
     %p Lorem ipsum dolor sit amet holla!
-    %div#user-profile-list-container{ 'data-user-profiles' => profile.to_json}
+    %div#user-profile-list-container{ 'data-user-profiles' => profile.to_json }
+    %ul
+      %li= profile.email

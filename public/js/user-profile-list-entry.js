@@ -44,17 +44,12 @@
 /* 0 */
 /***/ function(module, exports, __webpack_require__) {
 
-	/**
-	 * @jsx React.DOM
-	 */
 	'use strict';
 
 	var React = __webpack_require__(1);
+	var UserProfileListContainer = __webpack_require__(!(function webpackMissingModule() { var e = new Error("Cannot find module \"../components/userprofile/user-profile-list-container.js\""); e.code = 'MODULE_NOT_FOUND'; throw e; }()));
 
-	var TerminalWindow = __webpack_require__(159);
-	var terminalPromptArea = document.getElementById('sign-up-form');
-
-	React.render(React.createElement(TerminalWindow, null), terminalPromptArea);
+	React.render(React.createElement('div', { id: 'user-profile-list-container' }));
 
 /***/ },
 /* 1 */
@@ -20430,123 +20425,6 @@
 	module.exports = onlyChild;
 
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(3)))
-
-/***/ },
-/* 157 */,
-/* 158 */,
-/* 159 */
-/***/ function(module, exports, __webpack_require__) {
-
-	/**
-	 * @jsx React.DOM
-	 */
-
-	'use strict';
-
-	var React = __webpack_require__(1);
-
-	//React components
-	var TerminalPrompt = __webpack_require__(160);
-
-	var TerminalWindow = React.createClass({
-	  displayName: 'TerminalWindow',
-
-	  getInitialState: function getInitialState() {
-	    return {
-	      message: 'Enter your email address to sign up.'
-	    };
-	  },
-	  handleKeyDown: function handleKeyDown(e) {
-	    //Setup listener for key events in order
-	    //to preceed the text with blinking cursor
-	    switch (e.keyCode) {
-	      case 8:
-	        // Backspace
-	        console.log('backspace');
-	        break;
-	      case 9: // Tab
-	      case 13: // Enter
-	      case 37: // Left
-	      case 38: // Up
-	      case 39: // Right
-	      case 40:
-	        // Down
-	        break;
-	      default:
-	        this.moveCursor();
-	    }
-	  },
-	  update: function update(e) {
-	    //TODO: Need real live validation here for emails
-	    if (e.target.value === 'ed@htmelvis.com') {
-	      var terminalMessage = 'What\'s up Ed!';
-	    } else {
-	      var terminalMessage = 'Ooopss you seem to have not typed in an email address';
-	    }
-	    this.setState({
-	      message: terminalMessage
-	    });
-	  },
-	  propTypes: {
-	    update: React.PropTypes.func.isRequired
-	  },
-	  render: function render() {
-	    return React.createElement(
-	      'div',
-	      null,
-	      React.createElement(
-	        'form',
-	        { action: '' },
-	        React.createElement(
-	          'label',
-	          { 'for': '', 'aria-hidden': 'true' },
-	          React.createElement(
-	            'span',
-	            { className: 'invisible' },
-	            'Email Address:'
-	          ),
-	          React.createElement(
-	            'span',
-	            { className: 'arrow-cursor' },
-	            '>'
-	          ),
-	          React.createElement('span', { className: 'blinking-cursor' })
-	        ),
-	        React.createElement(TerminalPrompt, { update: this.update }),
-	        React.createElement(
-	          'p',
-	          null,
-	          this.state.message
-	        )
-	      )
-	    );
-	  }
-	});
-
-	module.exports = TerminalWindow;
-
-/***/ },
-/* 160 */
-/***/ function(module, exports, __webpack_require__) {
-
-	/**
-	 * @jsx React.DOM
-	 */
-
-	"use strict";
-
-	var React = __webpack_require__(1);
-
-	var TerminalPrompt = React.createClass({
-	  displayName: "TerminalPrompt",
-
-	  render: function render() {
-	    return React.createElement("input", { type: "email", className: "terminal-cmd-input required email", onChange: this.props.update });
-	  }
-
-	});
-
-	module.exports = TerminalPrompt;
 
 /***/ }
 /******/ ]);
