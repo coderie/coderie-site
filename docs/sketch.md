@@ -5,7 +5,10 @@
 Sketch has quickly become a favorite among designers and has garnered a vast amount of support from their growing online community of users. Below are some resources on learning to use sketch, free sketch mockups, and plugins found useful by members of Coderie.
 
 ##Tutorials:
-  http://leveluptuts.com/tutorials/sketch-3-tutorials
+  * http://leveluptuts.com/tutorials/sketch-3-tutorials
+  * http://webdesign.tutsplus.com/categories/sketch
+  * http://www.learnsketch.com/tutorials.html
+  * http://www.sketchappsources.com/tutorials-tips.html
 
 ##Plugins:
   * http://leveluptuts.com/tutorials/exploring-sketch-plugins
