@@ -14,7 +14,9 @@ Sketch has quickly become a favorite among designers and has garnered a vast amo
   * http://leveluptuts.com/tutorials/exploring-sketch-plugins
     * Video looking at some usefull sketch plugins.
   * http://sketchtoolbox.com/
-    * Package manager type plugin management for sketch.
+    * Package manager type plugin management for sketch.(Sketch now has a built in package manager style feature, but this is still helpful)
+  * http://speckyboy.com/2015/11/04/plugins-sketch-app/
+    * New article on 20 essential Sketch Plugins  
   * https://github.com/hrescak/Sketch-Flex-Layout
     * Allows for CSS Flexbox layouts using stylesheets and prototypes.
   * https://github.com/timuric/Content-generator-sketch-plugin
